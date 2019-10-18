@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<script>
+$(document).ready(function () {
+    $("p.appear").hide();
+
+    $("button.animation").click(function () {
+        var div = $("div");
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '100px'}, "slow");
+    });
+
+    $("button.hide").click(function () {
+        $("p.disappear").hide();
+        $("p.appear").show()
+    });
+
+
+    $("button.show").click(function () {
+        $("p.disappear").show();
+        $("p.appear").hide()
+    });
+});
+
+
+</script>
+<button class="animation">Start Animation</button>
+<div style="position:relative;">HELLO</div>
+
+<p class="disappear">If you click on the "Hide" button, this text will be disappeared and new text will be appeared</p>
+<p class="appear">If you click on the "Show" button, this test will be disappeared and new text will be appeared</p>
+
+<button class="hide">Hide</button>
+<button class="show">Show</button>
+
+</body>
+</html>
